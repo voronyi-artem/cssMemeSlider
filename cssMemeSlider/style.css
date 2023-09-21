@@ -159,7 +159,7 @@ input[name='rad'] {
 
 @media (max-width: 768px) {
 
-  .bottom {
+  .textforslide {
     flex-direction: column-reverse;
   }
 
