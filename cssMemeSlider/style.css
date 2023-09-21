@@ -60,3 +60,113 @@ body {
 
 
 
+input[name='rad'] {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.slider-images {
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  width: 20%;
+  transition: all .6s ease;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  align-items: center;
+}
+
+.text-meme {
+  display: flex;
+  flex: 1 0 100%;
+  transition: all .6s ease;
+}
+
+
+#button1:checked~.slider-images .display {
+  margin-left: 0;
+}
+
+#button2:checked~.slider-images .display {
+  margin-left: -20%;
+}
+
+#button3:checked~.slider-images .display {
+  margin-left: -40%;
+}
+
+#button4:checked~.slider-images .display {
+  margin-left: -60%;
+}
+
+#button5:checked~.slider-images .display {
+  margin-left: -80%;
+}
+
+
+#button1:checked~.textforslide .text .tm {
+  margin-left: 0;
+}
+
+#button2:checked~.textforslide .text .tm {
+  margin-left: -100%;
+}
+
+#button3:checked~.textforslide .text .tm {
+  margin-left: -200%;
+}
+
+#button4:checked~.textforslide .text .tm {
+  margin-left: -300%;
+}
+
+#button5:checked~.textforslide .text .tm {
+  margin-left: -400%;
+}
+
+#button1:checked~.textforslide label[for="button1"] span,
+#button2:checked~.textforslide label[for="button2"] span,
+#button3:checked~.textforslide label[for="button3"] span,
+#button4:checked~.textforslide label[for="button4"] span,
+#button5:checked~.textforslide label[for="button5"] span {
+  border: 0.2rem solid cornflowerblue;
+  background-color: transparent;
+}
+
+#button1:checked~.textforslide label[for="button1"]:hover span,
+#button2:checked~.textforslide label[for="button2"]:hover span,
+#button3:checked~.textforslide label[for="button3"]:hover span,
+#button4:checked~.textforslide label[for="button4"]:hover span,
+#button5:checked~.textforslide label[for="button5"]:hover span {
+  border: 0.2px solid #ffffff;
+}
+
+@media (max-width: 768px) {
+
+  .bottom {
+    flex-direction: column-reverse;
+  }
+
+  .navigation {
+    justify-content: center;
+    padding: 0.5rem 0.3rem;
+  }
+
+  .text {
+    margin-bottom: 1rem;
+  }
+}
